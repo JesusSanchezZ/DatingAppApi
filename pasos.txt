@@ -1,0 +1,149 @@
+node 14.19.3
+angular 11.2.19
+
+enlaces
+	https://bootswatch.com/
+	https://valor-software.com/ngx-bootstrap/#/
+	
+
+
+creación de carpeta...
+selección de carpeta...
+creación archivo de solución..
+	dotnet new sln
+creación de webapi
+	dotnet new weapi -o API
+Agregamos la api al proyecto
+	dotnet sln add API
+
+Configuración de VScode
+	en extensiones 
+		c# -- microsoft
+		c# extenssions
+
+cd api
+	dotnet run
+
+certificados ssl
+	dotnet dev-certs https --trust
+
+Extensiones 
+	material icon theme
+	nuget gallery
+
+entityframeworkCore --------------
+entityframeworkCore.sqlite      -------------------- Pruebas
+
+________________________________________________________________________________
+dotnet ef migrations add InitialCreate -o Data/Migrations
+
+Creación de la base de datos.
+	dotnet ef database update
+
+-----------------------------------------------------------------
+Angular bootstrap
+ngx-bootstrap
+	Agregando al proyecto
+	ng add ngx-bootstrap
+
+
+----------------------------------------------------------------
+Autenticación
+	agregamos campos a la clase AppUser y actualizamos en la base de datos
+		dotnet ef migrations add UserPasswordAdded
+	y se actualiza la base de datos
+		dotnet ef database update
+
+Creación del controlador para la administracion de inicio de sesión y registro
+
+Eliminación de BD
+	dotnet ef database drop
+
+Actualización de la BD
+	dotnet ef database update
+
+
+
+--------------------------------------------------------------------
+Creación de Tokens
+	añadimos la librería System.IdentityModel.Tokens.Jwt
+
+Agregamos middleware para autenticación de usuarios
+	agregamos el paquete
+		Microsoft.AspNetCore.Authentication.JwtBearer
+
+
+
+-------------------------------------------------------------
+Lado Cliente 
+Creación del navbar
+	generamos componente en client/src/app
+		ng g c nav --skip-tests
+
+importamos FormsModule en app.module.ts
+
+
+___________________________________________________________________________________
+
+Persistencia del login
+
+
+
+---------------------------------------------------------------------------------
+Agregamos Toastr 	
+	npm install ngx-toastr@13.2.1
+
+Proteger enlaces de usuarios no autenticados, creamos carpeta _guards
+	ng g guard auth --skip-tests
+		(*) CanActivate
+
+
+añadiendo bootswatch
+	npm install bootswatch
+
+creación de módulo para limpieza de código
+	ng g m shared --flat
+
+
+------------------------------------------------------------------------------------------------
+BACKEND
+__________________________________________
+Middleware para manejo de errores global
+creación de carpetar Errors
+
+Creación del controlador
+creaciion del manejador de exepciones
+creacion del middleware
+
+
+Agregamos automapper desde nuget
+	autoMapper.extensions.microsoft
+
+______________________________________________________
+FRONTEND
+
+creación de componente en carpeta errors
+	ng generate component errors/test-error --skip-tests
+
+	--> prueba manejador de errores de la api
+
+interceptor http angular
+creamos carpeta _interceptors
+	ng g interceptor --skip-tests
+
+
+cambiamos la version de compilación de javascript a es2019 en el archivo tsconfig.json
+
+-----------------------
+Agregamos galeria de fotos
+	npm install @kolkov/ngx-gallery
+
+spinners 
+	ng add ngx-spinner
+
+
+INstalación de Cloudinary en la api
+	desde nuget packages
+
+
+
